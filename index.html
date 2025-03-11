@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cloneBOXCHAMPY</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Alumni Sans", sans-serif;
+                   
+            
+        }
+        .hero-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: rgba(253, 234, 234, 1);
+            z-index: 0;
+           /* border: 3px solid green;*/
+        }
+        header  {
+             /*border: 1px solid pink;*/
+             /*background-color: black;*/
+             padding: 10px 10% 0px;
+             position: absolute; 
+             top: 0;
+             left: 0;
+             right: 0;
+              z-index: 10; 
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+             
+        }
+        header .navbar {
+             /*border: 1px solid green;*/
+            display: flex;
+            align-items: center;
+            color: white;
+            width: 100%;
+
+        }
+        header .navbar h1 {
+            padding-left: 10px;
+            letter-spacing: 3px
+        }
+        header .navbar .nav-links {
+            padding-left: 360px;
+             /*border: 1px solid orange;*/
+        }
+        header .navbar .nav-links a {
+           margin: 18px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+          font-size: small;
+          letter-spacing: 2px
+            
+        }
+        header .navbar .nav-button{
+            padding-left: 30px;
+            border: none;                          
+            outline: none;
+        }
+        header .navbar .nav-button button {
+          padding-left: 25px;
+          padding-right: 25px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+            background-color: rgb(205, 59, 59);
+            border-radius: 5px;
+        }
+
+        .hero {
+        position: relative;
+        text-align: left;
+        padding: 0;
+        height: 100vh;
+        width: 100%;
+        margin-top: 0px; 
+        overflow: hidden
+        
+    }
+    .hero-content {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 100%;
+        padding-bottom: 0px;
+        padding-right: 600px;
+        /* border: 1px solid green;*/
+       
+        
+    }
+
+    .hero-content h1 {
+        font-size: 5rem;
+        font-weight: bold;
+        letter-spacing: 15px;
+        color: white;
+        position: relative;
+        z-index: 2;
+       
+    }
+
+    .hero-content span {
+        color: rgb(205, 59, 59);
+    }
+
+    .hero img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(253, 234, 234, 1);
+        /* border: 2px solid orange;*/
+       
+    }
+    .category-container{
+        position: absolute;          
+        top: 90%;                     
+        left: 50%;                    
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: fit-content;
+        height: fit-content;
+        background-color: white;
+       /* border: 1px solid green;*/
+        border-radius: 10px;
+    }
+    .category-item {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .about {
+        background-color: rgba(253, 234, 234, 1);
+        height: 100hv;
+    }
+    .about .about-content{
+        display: flex;
+        flex-direction: row;
+       padding-left: 85px;
+        align-items: center;
+        text-align: justify;
+        padding-top: 150px;
+        padding-bottom: 150px;
+       /* border: 1px solid green;*/
+
+    }
+    .about .about-content img {
+        width: 500px;
+       
+        
+    }
+   
+    .about .about-content .write-up-content {
+        width: 500px;
+        height: auto;
+      /*  border: 1px solid red;*/
+        margin-left: 50px;
+        margin-right: 50px;
+        
+        
+    }
+    .about .about-content .write-up-content .line-heading{
+        display: flex;
+        flex-direction: row;
+
+    }
+    .about .about-content .write-up-content .line-heading div {
+        border: 3px solid rgba(205, 67, 67, 1);
+        height: 75px;
+        width: 5px;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+    .about .about-content .write-up-content .line-heading h2 {
+        color: black;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 100%;
+        
+
+        
+    }
+    
+    .about .about-content .write-up-content p {
+      padding-top: 20px;
+      font-size: medium;
+      
+    }
+    .about .about-content .write-up-content .paragraph-two {
+     padding-top: 30px;
+     padding-bottom: 30px;
+    }
+    .about .about-content .write-up-content button {
+       background-color: rgba(205, 67, 67, 1); 
+       color: white;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       padding-left: 20px;
+       padding-right: 20px;
+       border-radius: 5px;
+       border: none;                          
+       outline: none;
+    }
+    footer {
+        background-color: black;
+        padding-top: 50px;
+    }
+    footer .footer-content {
+        display: flex;
+        flex-direction: row;
+    }
+    footer .footer-content h2 {
+        color: white;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 100%;
+        width: 400px;
+       /* border: 1px solid white;*/
+        margin-right: 680px;
+        margin-left: 82px;
+    }
+    footer .footer-content h2 span {
+        color: rgba(205, 67, 67, 1);
+    }
+    footer .footer-content .social-media-links {
+       letter-spacing: 20px;
+    }
+    footer .Copyrights {
+     display: flex;
+     flex-direction: row;
+     color: white;
+     padding-top: 100px;
+     padding-bottom: 50px;
+     font-weight: lighter;
+        font-size: 14px;
+    }
+    footer .Copyrights .first-paragrah {
+        margin-right: 485px;
+        margin-left: 82px;
+       
+    }
+    footer .Copyrights .footer-text {
+      padding-left: 200px;
+      color: white;
+      margin-right: 30px;
+      
+    }
+    
+
+
+
+
+    
+    
+   
+
+     
+        
+
+    </style>
+</head>
+<body>
+    <div class="hero-wrapper">
+        <header>
+            <nav class="navbar">
+                <div><img src="./assest/image 12.png" alt="boxing glove icon"></div>
+                <div>
+                    <h1>BOXCHAMPY</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="HOME">HOME</a>
+                    <a href="ABOUT">ABOUT</a>
+                    <a href="LOCATION">LOCATION</a>
+                    <a href="CONTACT">CONTACT</a>
+                </div>
+                <div class="nav-button">
+                    <button>CONTACT</button>
+                </div>
+            </nav>
+        </header>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>FIGHT LIKE <br> A <span>CHAMPION</span> </h1>
+            </div>
+            <img src="./assest/hero-img-two.png" alt="boxer">
+        </section>
+        <div class="category-container">
+            <div class="category-item">
+                <img src="./assest/glove.png" alt="glove">
+                <h3>LESSONS</h3>
+            </div>
+            <div class="category-item">
+                <img src="./assest/trophy.png" alt="trophy">
+                <h3>TOURNAMENTS</h3>
+            </div>
+            <div class="category-item">
+                <img src="./assest/weight.png" alt="weight">
+                <h3>FITNESS</h3>
+            </div>
+        </div>
+        
+    </div>
+
+    <section class="about">
+        <div class="about-content">
+            <div><img src="./assest/image 11.png" alt="two boxers"></div>
+            <div class="write-up-content">
+                <div class="line-heading">
+                    <div class="empty-div"></div>
+                    <h2>HOW WE GOT STARTED IN THIS BUSINESS</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel. </p>
+                <p class="paragraph-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nunc ullamcorper scelerisque mi, in malesuada felis malesuada vel.</p>
+                <button>TAKE A FREE LESSON</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h2>READY FOR YOUR <span>NEXT</span> LESSON?</h2>
+            </div>
+            <div class="social-media-links">
+                <img src="./assest/facebook.png" alt="Facebook icon for CJay's social media">
+                <img src="./assest/instagram.png" alt="Instagram icon for CJay's social media">
+                <img src="./assest/tiktok.png" alt="TikTok icon for CJay's social media">
+            </div>
+        </div>
+        <div>
+            <div class="Copyrights">
+                <div class="first-paragrah">
+                    <p>Copyrights © 2025 by CJay | All rights reserved</p>
+                </div>
+                <p class="footer-text">Terms & Conditions</p>
+                <p class="footer-text-two">Privacy Policy</p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html> 
